@@ -44,13 +44,12 @@ class MyPainter extends CustomPainter {
   int i = 0;
 
   void generate() {
-    x[i] = x[i] - 10;
+    x[i] = x[i] - i * 10;
     y[i] = y[i] + Random().nextInt(60) - 30;
   }
 
   @override
   void paint(Canvas canvas, Size size) {
-    print(x);
     var pointMode = ui.PointMode.polygon;
     var points = List.generate(30, (index) => Offset(x[i], y[i]));
 
